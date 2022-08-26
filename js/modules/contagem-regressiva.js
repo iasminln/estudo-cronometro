@@ -1,12 +1,14 @@
-import Format from "../modules/format.js";
+import Format from "./format.js";
+import * as init from "./secoes.js";
 
 export default function ContagemRegressiva() {
+  const btnVoltar = document.querySelector(".contagem .btn-voltar");
   const inputSeg = document.querySelector(".contagem .input-seg");
   const inputMin = document.querySelector(".contagem .input-min");
   const inputHora = document.querySelector(".contagem .input-hora");
-  const btnIniciarReg = document.querySelector(".contagem .btn-iniciar");
-  const btnPararReg = document.querySelector(".contagem .btn-parar");
-  const btnResetReg = document.querySelector(".contagem .btn-reset");
+  const btnIniciar = document.querySelector(".contagem .btn-iniciar");
+  const btnParar = document.querySelector(".contagem .btn-parar");
+  const btnReset = document.querySelector(".contagem .btn-reset");
   const valorSeg = document.querySelector(".contagem .valor-seg");
   const valorMin = document.querySelector(".contagem .valor-min");
   const valorHora = document.querySelector(".contagem .valor-hora");
@@ -17,10 +19,15 @@ export default function ContagemRegressiva() {
   let contagem;
 
   function iniciarContagem() {
-    btnIniciarReg.setAttribute("disabled", "");
-    hora = inputHora.value ? inputHora.value : 0;
-    min = inputMin.value ? inputMin.value : 0;
-    seg = inputSeg.value ? inputSeg.value : 0;
+    btnIniciar.setAttribute("disabled", "");
+
+    if (!btnIniciar.hasAttribute("data-iniciou")) {
+      hora = inputHora.value ? inputHora.value : 0;
+      min = inputMin.value ? inputMin.value : 0;
+      seg = inputSeg.value ? inputSeg.value : 0;
+
+      btnIniciar.setAttribute("data-iniciou", "");
+    }
 
     contagem = setInterval(() => {
       --seg;
@@ -50,21 +57,30 @@ export default function ContagemRegressiva() {
   }
 
   function pararContagem() {
-    btnIniciarReg.removeAttribute("disabled", "");
+    btnIniciar.removeAttribute("disabled", "");
     clearInterval(contagem);
   }
 
-  function resetContagem(){
-    btnIniciarReg.removeAttribute("disabled", "");
+  function resetContagem() {
+    btnIniciar.removeAttribute("disabled", "");
+    btnIniciar.removeAttribute("data-iniciou", "");
     clearInterval(contagem);
 
-    inputHora.value = ''
+    inputHora.value = "";
+    inputMin.value = "";
+    inputSeg.value = "";
     valorHora.innerText = Format(0);
     valorMin.innerText = Format(0);
     valorSeg.innerText = Format(0);
   }
 
-  btnIniciarReg.addEventListener("click", iniciarContagem);
-  btnPararReg.addEventListener("click", pararContagem);
-  btnResetReg.addEventListener("click", resetContagem);
+  function voltarPagina() {
+    init.divInicial.setAttribute("data-visivel", "true");
+    init.divContagem.setAttribute("data-visivel", "false");
+  }
+
+  btnIniciar.addEventListener("click", iniciarContagem);
+  btnParar.addEventListener("click", pararContagem);
+  btnReset.addEventListener("click", resetContagem);
+  btnVoltar.addEventListener("click", voltarPagina);
 }

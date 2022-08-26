@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  color: #161616;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.main-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+[data-visivel="false"] {
+  display: none;
+}
+
+[data-visivel="true"] {
+  display: block;
+}
+
+.inicial p {
+  text-align: center;
+}
+
+.inicial p.titulo {
+  display: none;
+  font-family: "Playfair Display", serif;
+  font-size: 2.8125rem;
+  margin-bottom: 30px;
+}
+
+.inicial p.titulo.ativo {
+  display: block;
+}
+
+.inicial .btn-imagens {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.inicial .btn-imagens div + div {
+  margin-left: 20px;
+}
+
+.inicial .btn-imagens img {
+  border: 1px solid transparent;
+  width: 400px;
+}
+
+.inicial .btn-imagens img:hover {
+  cursor: pointer;
+  border: 1px solid #161616;
+}
+
+.inicial .btn-imagens img.ativo {
+  border: 1px solid #161616;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.inicial .btn-inicial {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-bottom: 50px;
+  background-color: #f9f9f9;
+  border: 1px solid #161616;
+  color: #161616;
+  font-size: 0.875rem;
+  font-family: "IBM Plex Mono", monospace;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+button + button {
+  margin-left: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #161616;
+  color: #f9f9f9;
+}
+
+button:disabled {
+  border: 1px solid #d6d6d6;
+  background-color: #f9f9f9;
+  color: #d6d6d6;
+}
+
+button:disabled:hover {
+  cursor: initial;
+}
+
+button.btn-voltar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.btn-voltar::before {
+  content: "";
+  background: url("../../assets/arrow-voltar-escura.svg");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+button.btn-voltar:hover::before {
+  background: url("../../assets/arrow-voltar-clara.svg");
+}
+
+.cronometro .valores {
+  font-size: 3.75rem;
+  color: #161616;
+  letter-spacing: 5px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.cronometro .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.contagem .valores {
+  font-size: 3.75rem;
+  color: #161616;
+  letter-spacing: 5px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.contagem .inputs {
+  margin-bottom: 40px;
+}
+
+.contagem .inputs span {
+  font-size: 0.875rem;
+}
+
+.contagem .inputs input {
+  width: 70px;
+  padding: 5px 10px;
+  border: 1px solid #161616;
+}
+
+.contagem .buttons {
+  display: flex;
+  justify-content: center;
+}

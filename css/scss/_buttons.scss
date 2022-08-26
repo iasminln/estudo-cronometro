@@ -1,0 +1,50 @@
+button {
+  margin-bottom: 50px;
+  background-color: $det-claro;
+  border: 1px solid $det-escuro;
+  color: $text-principal;
+  font-size: font(14);
+  font-family: "IBM Plex Mono", monospace;
+  padding: 10px 20px;
+  transition: 0.5s;
+
+  & + button {
+    margin-left: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $det-escuro;
+    color: $det-claro;
+  }
+
+  &:disabled {
+    border: 1px solid $det-disabled;
+    background-color: $det-claro;
+    color: $det-disabled;
+
+    &:hover {
+      cursor: initial;
+    }
+  }
+
+  &.btn-voltar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+      background: url("../../assets/arrow-voltar-escura.svg");
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 10px;
+      transition: 0.5s;
+    }
+
+    &:hover::before {
+      background: url("../../assets/arrow-voltar-clara.svg");
+    }
+  }
+}

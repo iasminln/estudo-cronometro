@@ -1,5 +1,9 @@
+import Inicial from "./modules/inicial.js";
+import ClickInicial from "./modules/click-inicial.js";
 import Cronometro from "./modules/cronometro.js";
-import ContagemRegressiva from "./modules/contagem-regressiva.js"
+import ContagemRegressiva from "./modules/contagem-regressiva.js";
 
-Cronometro()
-ContagemRegressiva()
+Inicial();
+ClickInicial();
+Cronometro();
+ContagemRegressiva();

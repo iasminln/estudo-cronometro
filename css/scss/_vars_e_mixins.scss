@@ -1,0 +1,19 @@
+// Cores
+
+$text-principal: #161616;
+
+$det-escuro: #161616;
+$det-claro: #f9f9f9;
+$det-disabled: #d6d6d6;
+
+// Mixins
+
+@function font($size) {
+  @return $size / 16 + rem;
+}
+
+@mixin mq($width, $type: max) {
+  @media (#{$type}-width: ($width + px)) {
+    @content;
+  }
+}

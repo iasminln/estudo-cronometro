@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  color: $text-principal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

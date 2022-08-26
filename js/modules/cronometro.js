@@ -1,6 +1,8 @@
-import Format from "../modules/format.js"
+import Format from "./format.js";
+import * as init from "./secoes.js";
 
 export default function Cronometro() {
+  const btnVoltar = document.querySelector(".cronometro .btn-voltar");
   const btnIniciar = document.querySelector(".cronometro .btn-iniciar");
   const btnParar = document.querySelector(".cronometro .btn-parar");
   const btnReset = document.querySelector(".cronometro .btn-reset");
@@ -12,7 +14,6 @@ export default function Cronometro() {
   let min = 0;
   let hora = 0;
   let contagem;
-
 
   function iniciarCronometro() {
     btnIniciar.setAttribute("disabled", "");
@@ -51,7 +52,13 @@ export default function Cronometro() {
     timerCronHora.innerText = Format(hora);
   }
 
+  function voltarPagina() {
+    init.divInicial.setAttribute("data-visivel", "true");
+    init.divCronometro.setAttribute("data-visivel", "false");
+  }
+
   btnIniciar.addEventListener("click", iniciarCronometro);
   btnParar.addEventListener("click", pararCronometro);
   btnReset.addEventListener("click", resetCronometro);
+  btnVoltar.addEventListener("click", voltarPagina);
 }

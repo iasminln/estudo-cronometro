@@ -1,0 +1,29 @@
+.contagem {
+  .valores {
+    font-size: font(60);
+    color: $text-principal;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .inputs {
+    margin-bottom: 40px;
+
+    span {
+      font-size: font(14);
+    }
+
+    input {
+      width: 70px;
+      padding: 5px 10px;
+      border: 1px solid $det-escuro;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+}

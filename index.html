@@ -4,39 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <title>Cronômetro e Contagem regressiva</title>
   </head>
   <body>
-    <div class="cronometro">
-      <div class="valores">
-        <span class="timerHora">00</span> : <span class="timerMin">00</span> :
-        <span class="timerSeg">00</span>
-      </div>
-      <div class="buttons">
-        <button class="btn-iniciar">Iniciar</button>
-        <button class="btn-parar">Pausar</button>
-        <button class="btn-reset">Reset</button>
-      </div>
-    </div>
-    <br /><br /><br />
+    <div class="main-grid">
+      <div class="inicial">
+        <p>Escolha uma opção:</p>
+        <p class="titulo">Contagem regressiva</p>
+        <p class="titulo">Cronômetro</p>
 
-    <div class="contagem">
-      <div class="valores">
-        <span class="valor-hora">00</span> : <span class="valor-min">00</span> :
-        <span class="valor-seg">00</span>
+        <div class="btn-imagens">
+          <div>
+            <img src="./assets/ampulheta.jpg" alt="Contagem Regressiva" />
+          </div>
+          <div><img src="./assets/cronometro.jpg" alt="Cronômetro" /></div>
+        </div>
+
+        <div class="btn-inicial"><button>Clique aqui!</button></div>
       </div>
-      <div class="inputs">
-        <span>Horas</span>
-        <input type="number" class="input-hora" min="0" />
-        <span>Minutos</span>
-        <input type="number" class="input-min" min="0" />
-        <span>Segundos</span>
-        <input type="number" class="input-seg" min="0" />
+
+      <div class="cronometro">
+        <button class="btn-voltar">Voltar</button>
+        <div class="valores">
+          <span class="timerHora">00</span> : <span class="timerMin">00</span> :
+          <span class="timerSeg">00</span>
+        </div>
+        <div class="buttons">
+          <button class="btn-iniciar">Iniciar</button>
+          <button class="btn-parar">Pausar</button>
+          <button class="btn-reset">Reset</button>
+        </div>
       </div>
-      <div class="buttons">
-        <button class="btn-iniciar">Iniciar</button>
-        <button class="btn-parar">Pausar</button>
-        <button class="btn-reset">Reset</button>
+
+      <div class="contagem">
+        <button class="btn-voltar">Voltar</button>
+        <div class="valores">
+          <span class="valor-hora">00</span> :
+          <span class="valor-min">00</span> :
+          <span class="valor-seg">00</span>
+        </div>
+        <div class="inputs">
+          <span>Horas:</span>
+          <input type="number" class="input-hora" min="0" />
+          <span>Minutos:</span>
+          <input type="number" class="input-min" min="0" />
+          <span>Segundos:</span>
+          <input type="number" class="input-seg" min="0" />
+        </div>
+        <div class="buttons">
+          <button class="btn-iniciar">Iniciar</button>
+          <button class="btn-parar">Pausar</button>
+          <button class="btn-reset">Reset</button>
+        </div>
       </div>
     </div>
   </body>
