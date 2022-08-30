@@ -8,8 +8,17 @@ button {
   padding: 10px 20px;
   transition: 0.5s;
 
+  @include mq(500){
+    font-size: font(13);
+    padding: 7px 17px;
+  }
+
   & + button {
     margin-left: 20px;
+
+    @include mq(500){
+      margin-left: 10px;
+    }
   }
 
   &:hover {

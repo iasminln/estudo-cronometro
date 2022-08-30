@@ -6,6 +6,10 @@
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
+
+    @include mq(500) {
+      font-size: font(50);
+    }
   }
 
   .buttons {

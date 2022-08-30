@@ -20,7 +20,8 @@ img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: 100vh;
+  padding: 20px;
 }
 
 [data-visivel="false"] {
@@ -42,6 +43,12 @@ img {
   margin-bottom: 30px;
 }
 
+@media (max-width: 500px) {
+  .inicial p.titulo {
+    font-size: 2.1875rem;
+  }
+}
+
 .inicial p.titulo.ativo {
   display: block;
 }
@@ -52,13 +59,33 @@ img {
   margin-bottom: 30px;
 }
 
+@media (max-width: 500px) {
+  .inicial .btn-imagens {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .inicial .btn-imagens div + div {
   margin-left: 20px;
+}
+
+@media (max-width: 500px) {
+  .inicial .btn-imagens div + div {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 .inicial .btn-imagens img {
   border: 1px solid transparent;
   width: 400px;
+}
+
+@media (max-width: 500px) {
+  .inicial .btn-imagens img {
+    width: 300px;
+  }
 }
 
 .inicial .btn-imagens img:hover {
@@ -87,8 +114,21 @@ button {
   transition: 0.5s;
 }
 
+@media (max-width: 500px) {
+  button {
+    font-size: 0.8125rem;
+    padding: 7px 17px;
+  }
+}
+
 button + button {
   margin-left: 20px;
+}
+
+@media (max-width: 500px) {
+  button + button {
+    margin-left: 10px;
+  }
 }
 
 button:hover {
@@ -136,6 +176,12 @@ button.btn-voltar:hover::before {
   justify-content: center;
 }
 
+@media (max-width: 500px) {
+  .cronometro .valores {
+    font-size: 3.125rem;
+  }
+}
+
 .cronometro .buttons {
   display: flex;
   justify-content: center;
@@ -150,8 +196,18 @@ button.btn-voltar:hover::before {
   justify-content: center;
 }
 
+@media (max-width: 500px) {
+  .contagem .valores {
+    font-size: 3.125rem;
+  }
+}
+
 .contagem .inputs {
   margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .contagem .inputs span {
@@ -162,6 +218,11 @@ button.btn-voltar:hover::before {
   width: 70px;
   padding: 5px 10px;
   border: 1px solid #161616;
+  margin: 6px 0 6px 15px;
+}
+
+.contagem .inputs input:disabled {
+  background-color: #d6d6d6;
 }
 
 .contagem .buttons {

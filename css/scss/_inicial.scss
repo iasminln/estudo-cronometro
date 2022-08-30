@@ -16,6 +16,10 @@
       font-size: font(45);
       margin-bottom: 30px;
 
+      @include mq(500) {
+        font-size: font(35);
+      }
+
       &.ativo {
         display: block;
       }
@@ -27,13 +31,27 @@
     justify-content: center;
     margin-bottom: 30px;
 
+    @include mq(500) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     div + div {
       margin-left: 20px;
+
+      @include mq(500) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
     }
 
     img {
       border: 1px solid transparent;
       width: 400px;
+
+      @include mq(500) {
+        width: 300px;
+      }
 
       &:hover {
         cursor: pointer;

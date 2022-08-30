@@ -6,10 +6,18 @@
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
+
+    @include mq(500) {
+      font-size: font(50);
+    }
   }
 
   .inputs {
     margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
 
     span {
       font-size: font(14);
@@ -19,6 +27,11 @@
       width: 70px;
       padding: 5px 10px;
       border: 1px solid $det-escuro;
+      margin: 6px 0 6px 15px;
+
+      &:disabled {
+        background-color: $det-disabled;
+      }
     }
   }
 
