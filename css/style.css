@@ -24,6 +24,12 @@ img {
   padding: 20px;
 }
 
+@media (max-width: 500px) {
+  .main-grid {
+    height: auto;
+  }
+}
+
 [data-visivel="false"] {
   display: none;
 }
