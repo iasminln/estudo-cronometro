@@ -161,7 +161,7 @@ button.btn-voltar {
 
 button.btn-voltar::before {
   content: "";
-  background: url("../../assets/arrow-voltar-escura.svg");
+  background: url("../assets/arrow-voltar-escura.svg");
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -170,7 +170,7 @@ button.btn-voltar::before {
 }
 
 button.btn-voltar:hover::before {
-  background: url("../../assets/arrow-voltar-clara.svg");
+  background: url("../assets/arrow-voltar-clara.svg");
 }
 
 .cronometro .valores {
